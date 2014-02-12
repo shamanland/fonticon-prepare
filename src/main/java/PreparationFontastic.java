@@ -91,6 +91,8 @@ public class PreparationFontastic extends Preparation {
                             os.print(value);
                             os.println("</string>");
                         }
+
+                        name = null;
                     }
                 }
             }
