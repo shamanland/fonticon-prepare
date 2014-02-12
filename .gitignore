@@ -1,0 +1,7 @@
+.idea
+*.class
+*.iml
+*.zip
+*.ttf
+*.xml
+local.properties
