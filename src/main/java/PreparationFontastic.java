@@ -11,20 +11,15 @@ import java.util.Enumeration;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
 
-public class PrepareFontastic {
-    public static void main(String[] args) throws IOException {
-        if (args.length == 0) {
-            System.out.println("Specify path to archive downloaded from http://fontastic.me/app/");
-            return;
-        }
-
-        File file = new File(args[0]);
+public class PreparationFontastic extends Preparation {
+    public void prepare(String archiveName) throws IOException {
+        File file = new File(archiveName);
         if (!file.canRead()) {
             System.out.println("Can not read file: " + file.getAbsolutePath());
             return;
         }
 
-        ZipFile zip = new ZipFile(args[0]);
+        ZipFile zip = new ZipFile(file);
         Enumeration<? extends ZipEntry> it = zip.entries();
 
         while (it.hasMoreElements()) {

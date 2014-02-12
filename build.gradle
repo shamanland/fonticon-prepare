@@ -1,1 +1,5 @@
 apply plugin: 'java'
+apply plugin: 'application'
+
+applicationName = "prepare"
+mainClassName = "Preparation"
